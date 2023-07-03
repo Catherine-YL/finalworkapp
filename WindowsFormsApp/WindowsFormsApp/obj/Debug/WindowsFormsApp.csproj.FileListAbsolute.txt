@@ -1,0 +1,16 @@
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.AssemblyReference.cache
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.SuggestedBindingRedirects.cache
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form2.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form3.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form4.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form5.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form6.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb

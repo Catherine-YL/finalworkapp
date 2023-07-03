@@ -53,3 +53,24 @@ insert into reader_info values('10000', 'wxy', '女', '学生', 5, 0, '信息学院', '
 
 /* procedure */ 
 
+
+
+
+/* grant */ 
+create role adm
+create role reader
+
+grant select on book_info to reader
+grant select on reader_info to reader
+grant select on borrow_table to reader
+
+
+select identy from login_table where login_id='test' and passwd='test'
+
+
+/* test */ 
+
+exec sp_adduser 'U','sa'
+
+select user
+revert
