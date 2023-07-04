@@ -30,37 +30,37 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_bbno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_brno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_rbno = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_rrno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.all_borrowed_info_table = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_bno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_rno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.all_borrowed_info_table)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_bbno);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_brno);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(23, 24);
@@ -79,15 +79,16 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "登记借阅";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // txt_bbno
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(431, 42);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 30);
-            this.textBox2.TabIndex = 11;
+            this.txt_bbno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_bbno.Location = new System.Drawing.Point(431, 42);
+            this.txt_bbno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_bbno.Name = "txt_bbno";
+            this.txt_bbno.Size = new System.Drawing.Size(255, 30);
+            this.txt_bbno.TabIndex = 11;
             // 
             // label1
             // 
@@ -99,14 +100,14 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "书号";
             // 
-            // textBox1
+            // txt_brno
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(116, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 30);
-            this.textBox1.TabIndex = 9;
+            this.txt_brno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_brno.Location = new System.Drawing.Point(116, 42);
+            this.txt_brno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_brno.Name = "txt_brno";
+            this.txt_brno.Size = new System.Drawing.Size(231, 30);
+            this.txt_brno.TabIndex = 9;
             // 
             // label2
             // 
@@ -121,9 +122,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txt_rbno);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txt_rrno);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(23, 128);
@@ -142,15 +143,16 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "登记还书";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox3
+            // txt_rbno
             // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(431, 42);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(255, 30);
-            this.textBox3.TabIndex = 11;
+            this.txt_rbno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_rbno.Location = new System.Drawing.Point(431, 42);
+            this.txt_rbno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_rbno.Name = "txt_rbno";
+            this.txt_rbno.Size = new System.Drawing.Size(255, 30);
+            this.txt_rbno.TabIndex = 11;
             // 
             // label3
             // 
@@ -162,14 +164,14 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "书号";
             // 
-            // textBox4
+            // txt_rrno
             // 
-            this.textBox4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox4.Location = new System.Drawing.Point(116, 42);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 30);
-            this.textBox4.TabIndex = 9;
+            this.txt_rrno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_rrno.Location = new System.Drawing.Point(116, 42);
+            this.txt_rrno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_rrno.Name = "txt_rrno";
+            this.txt_rrno.Size = new System.Drawing.Size(231, 30);
+            this.txt_rrno.TabIndex = 9;
             // 
             // label4
             // 
@@ -183,7 +185,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.all_borrowed_info_table);
             this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(23, 336);
             this.groupBox3.Name = "groupBox3";
@@ -192,22 +194,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "借阅信息";
             // 
-            // dataGridView1
+            // all_borrowed_info_table
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(823, 146);
-            this.dataGridView1.TabIndex = 0;
+            this.all_borrowed_info_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.all_borrowed_info_table.Location = new System.Drawing.Point(13, 30);
+            this.all_borrowed_info_table.Name = "all_borrowed_info_table";
+            this.all_borrowed_info_table.RowHeadersWidth = 51;
+            this.all_borrowed_info_table.RowTemplate.Height = 27;
+            this.all_borrowed_info_table.Size = new System.Drawing.Size(823, 146);
+            this.all_borrowed_info_table.TabIndex = 0;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.textBox7);
+            this.groupBox5.Controls.Add(this.txt_bno);
             this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.textBox8);
+            this.groupBox5.Controls.Add(this.txt_rno);
             this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.Location = new System.Drawing.Point(23, 232);
@@ -227,14 +229,14 @@
             this.button4.Text = "查询";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // txt_bno
             // 
-            this.textBox7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox7.Location = new System.Drawing.Point(431, 42);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(255, 30);
-            this.textBox7.TabIndex = 11;
+            this.txt_bno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_bno.Location = new System.Drawing.Point(431, 42);
+            this.txt_bno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_bno.Name = "txt_bno";
+            this.txt_bno.Size = new System.Drawing.Size(255, 30);
+            this.txt_bno.TabIndex = 11;
             // 
             // label7
             // 
@@ -246,14 +248,14 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "书号";
             // 
-            // textBox8
+            // txt_rno
             // 
-            this.textBox8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox8.Location = new System.Drawing.Point(116, 42);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(231, 30);
-            this.textBox8.TabIndex = 9;
+            this.txt_rno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_rno.Location = new System.Drawing.Point(116, 42);
+            this.txt_rno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_rno.Name = "txt_rno";
+            this.txt_rno.Size = new System.Drawing.Size(231, 30);
+            this.txt_rno.TabIndex = 9;
             // 
             // label8
             // 
@@ -283,7 +285,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.all_borrowed_info_table)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
@@ -294,23 +296,23 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_bbno;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_brno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_rbno;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_rrno;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView all_borrowed_info_table;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_bno;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_rno;
         private System.Windows.Forms.Label label8;
     }
 }

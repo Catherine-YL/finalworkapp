@@ -14,3 +14,7 @@ D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\Window
 D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
 D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form7.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form8.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form10.resources
+D:\Desktop\大三下\数据库系统原理\大作业\code\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form9.resources
