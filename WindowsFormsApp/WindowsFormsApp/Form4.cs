@@ -101,7 +101,7 @@ namespace WindowsFormsApp
             int a = readers_table.CurrentRow.Index;  // 获取当前选中行
             string rno = readers_table.Rows[a].Cells[0].Value.ToString().Trim();//获取该行的第0列数据
             string sql = "select borrow_table.Bno '书号', Bname '书名', BRdate '借出日期', BRlimit '限借日期', BWfine '罚款金额' from borrow_table,book_info,reader_info";
-            sql = sql + " where reader_info.Rno = borrow_table.Rno and book_info.Bno = borrow_table.Bno and borrow_table.RTdate is NULL";
+            sql = sql + " where reader_info.Rno = borrow_table.Rno and book_info.Bno = borrow_table.Bno and borrow_table.RTdate is NULL and borrow_table.Rno = '" + rno + "'";
             this.borrow_info.DataSource = Querylist(sql).Tables["borrowlist"];
         }
 

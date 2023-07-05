@@ -13,7 +13,7 @@ create table book_info(
 	Bpub varchar(50),
 	Bauthor varchar(1000),
 	Bsumnum int not null,
-	Bavailable int,
+	Bavailable int check(Bavailable>=0 and Bavailable<=Bsumnum),
 	Bborrow varchar(10)
 )
 create table reader_info(
@@ -21,8 +21,8 @@ create table reader_info(
 	Rname varchar(100) not null,
 	Rsex varchar(5) not null,
 	Rprofess varchar(100),
-	Ravailable int not null,
-	Rborrowed int,
+	Ravailable int not null check(Ravailable>=0),
+	Rborrowed int check(Rborrowed>=0),
 	Rdpartmt varchar(100),
 	Rtel varchar(30),
 	login_id varchar(100)
@@ -39,8 +39,12 @@ create table borrow_table(
 	foreign key(Bno) references book_info(Bno)
 )
 
+/* view */ 
+
+
+
 /* trigger */
-go
+go   /* ¹ÜÀíÔ±¶ÔÊé¼®ĞÅÏ¢ĞŞ¸ÄÊ±×Ô¶¯Ìî³äÊÇ·ñ¿É½è×Ö¶Î */
 create trigger nborrow on book_info for insert,update
 as
 update book_info set Bborrow='²»¿É½è'
@@ -48,11 +52,59 @@ from book_info,inserted
 where book_info.Bno=inserted.Bno
 and book_info.Bavailable=0
 
-go
+go   /* Ìí¼Ó¶ÁÕßµÄÊ±ºò×Ô¶¯Ìí¼ÓÕËºÅÃÜÂëÎª½èÊéÖ¤ºÅµÄ¶ÁÕßÕËºÅ */
 create trigger addlogin on reader_info for insert
 as
 insert into login_table
 select login_id,login_id,'reader' from inserted
+
+
+go 
+/* ½è³öÊ±Êé¼®¿É½èÊıÁ¿¼õÒ»£¬¶ÁÕß¿É½èÊıÁ¿¼õÒ»,ĞŞ¸Ä¿É½è×´Ì¬ */
+create trigger addavailable on borrow_table for insert
+as
+begin
+declare @Bborrow varchar(10)
+declare @Ravailable int
+select @Bborrow=Bborrow from book_info,inserted
+where book_info.Bno = inserted.Bno
+select @Ravailable=Ravailable from reader_info,inserted
+where reader_info.Rno = inserted.Rno
+if(@Bborrow='²»¿É½è' or @Ravailable <= 0)
+begin
+rollback transaction
+end
+update book_info set Bavailable = Bavailable-1
+from book_info,inserted
+where book_info.Bno = inserted.Bno
+update reader_info set Ravailable = Ravailable - 1, Rborrowed = Rborrowed + 1
+from reader_info,inserted
+where reader_info.Rno = inserted.Rno
+update book_info set Bborrow = '²»¿É½è'
+from book_info,inserted
+where book_info.Bno = inserted.Bno
+and Bavailable <= 0
+end
+
+go 
+/* »¹ÊéÊ±Êé¼®¿É½èÊıÁ¿¼ÓÒ»£¬¶ÁÕß¿É½èÊıÁ¿¼ÓÒ»,ĞŞ¸Ä¿É½è×´Ì¬ */
+create trigger minusavailable on borrow_table for update
+as
+begin
+set xact_abort on
+begin tran t2
+update book_info set Bavailable = Bavailable+1
+from book_info,inserted
+where book_info.Bno = inserted.Bno
+update reader_info set Ravailable = Ravailable + 1, Rborrowed = Rborrowed - 1
+from reader_info,inserted
+where reader_info.Rno = inserted.Rno
+update book_info set Bborrow = '¿É½è'
+from book_info,inserted
+where book_info.Bno = inserted.Bno
+and Bavailable > 0
+commit tran t2
+end
 
 
 /* insert */
@@ -63,7 +115,19 @@ insert into reader_info values('10000', 'wxy', 'Å®', 'Ñ§Éú', 5, 0, 'ĞÅÏ¢Ñ§Ôº', '
 insert into borrow_table values('10000', '9787118063080', GETDATE()-3, GETDATE()+30, NULL, 0)
 
 /* procedure */ 
-create proc 
+create proc borrow
+
+
+
+
+
+
+create proc retbook
+
+
+
+
+
 
 
 
@@ -75,8 +139,10 @@ grant select on book_info to reader
 grant select on reader_info to reader
 grant select on borrow_table to reader
 
-/* test */ 
 
+
+
+/* test */ 
 exec sp_adduser 'U','sa'
 
 select user
@@ -91,8 +157,10 @@ select Rno '½èÊéÖ¤ºÅ',Rname 'ĞÕÃû',Rsex 'ĞÔ±ğ',Rprofess 'Ö°³Æ',Ravailable '¿É½èÊ
 select borrow_table.Bno 'ÊéºÅ', Bname 'ÊéÃû', BRdate '½è³öÈÕÆÚ', BRlimit 'ÏŞ½èÈÕÆÚ', BWfine '·£¿î½ğ¶î' from borrow_table,book_info,reader_info
 where reader_info.Rno = borrow_table.Rno and book_info.Bno = borrow_table.Bno and borrow_table.RTdate is NULL
 
-select * from borrow_table
+update borrow_table set BWfine = CONVERT(int,(GETDATE()-BRdate))*2 where RTdate is NULL and GETDATE() > BRlimit
 
+select * from borrow_table
+select * from login_table
 
 
 

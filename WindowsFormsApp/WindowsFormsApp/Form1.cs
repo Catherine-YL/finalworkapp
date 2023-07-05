@@ -27,6 +27,12 @@ namespace WindowsFormsApp
             pwd = txt_pwd.Text.Trim();
             login();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public int login()
         {
             SqlConnection con = new SqlConnection(connectionString);//创建一个数据库连接

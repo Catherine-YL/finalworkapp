@@ -17,7 +17,7 @@ namespace WindowsFormsApp
         public Form3()
         {
             InitializeComponent();
-            string sql = "select * from book_info";
+            string sql = "select Bno '书号', Bname '书名', Bpub '出版社', Bauthor '作者', Bborrow '是否可借', Bsumnum '馆藏总数', Bavailable '可借数量' from book_info";
             this.booklist.DataSource = Query(sql).Tables["books"];
         }
 
@@ -74,7 +74,7 @@ namespace WindowsFormsApp
             string bname = txt_bname.Text.Trim();
             string bauthor = txt_bauthor.Text.Trim();
             string bpub = txt_bpub.Text.Trim();
-            this.booklist.DataSource = Query("select * from book_info where Bno like '%" + bno + "%' and Bname like '%" + bname + "%' and Bauthor like '%" + bauthor + "%' and Bpub like '%" + bpub + "%'").Tables["books"];
+            this.booklist.DataSource = Query("select Bno '书号', Bname '书名', Bpub '出版社', Bauthor '作者', Bborrow '是否可借', Bsumnum '馆藏总数', Bavailable '可借数量' from book_info where Bno like '%" + bno + "%' and Bname like '%" + bname + "%' and Bauthor like '%" + bauthor + "%' and Bpub like '%" + bpub + "%'").Tables["books"];
         }
 
         //删除数据事件

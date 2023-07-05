@@ -34,12 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_brno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txt_rbno = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_rrno = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.all_borrowed_info_table = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -48,11 +42,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_rno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txt_rbno = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_rrno = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.all_borrowed_info_table)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -119,6 +119,92 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "借书证号";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.all_borrowed_info_table);
+            this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Location = new System.Drawing.Point(23, 244);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(855, 182);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "借阅信息";
+            // 
+            // all_borrowed_info_table
+            // 
+            this.all_borrowed_info_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.all_borrowed_info_table.Location = new System.Drawing.Point(13, 30);
+            this.all_borrowed_info_table.Name = "all_borrowed_info_table";
+            this.all_borrowed_info_table.RowHeadersWidth = 51;
+            this.all_borrowed_info_table.RowTemplate.Height = 27;
+            this.all_borrowed_info_table.Size = new System.Drawing.Size(823, 146);
+            this.all_borrowed_info_table.TabIndex = 0;
+            this.all_borrowed_info_table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.all_borrowed_info_table_CellContentClick);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.txt_bno);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.txt_rno);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox5.Location = new System.Drawing.Point(23, 140);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(855, 98);
+            this.groupBox5.TabIndex = 14;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "查询借阅信息";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button4.Location = new System.Drawing.Point(713, 34);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 47);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "查询";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txt_bno
+            // 
+            this.txt_bno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_bno.Location = new System.Drawing.Point(431, 42);
+            this.txt_bno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_bno.Name = "txt_bno";
+            this.txt_bno.Size = new System.Drawing.Size(255, 30);
+            this.txt_bno.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(373, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 27);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "书号";
+            // 
+            // txt_rno
+            // 
+            this.txt_rno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txt_rno.Location = new System.Drawing.Point(116, 42);
+            this.txt_rno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_rno.Name = "txt_rno";
+            this.txt_rno.Size = new System.Drawing.Size(231, 30);
+            this.txt_rno.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(18, 45);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 27);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "借书证号";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button2);
@@ -127,10 +213,10 @@
             this.groupBox2.Controls.Add(this.txt_rrno);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(23, 128);
+            this.groupBox2.Location = new System.Drawing.Point(23, 437);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(855, 98);
-            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "还书登记";
             // 
@@ -183,98 +269,14 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "借书证号";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.all_borrowed_info_table);
-            this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(23, 336);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(855, 182);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "借阅信息";
-            // 
-            // all_borrowed_info_table
-            // 
-            this.all_borrowed_info_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.all_borrowed_info_table.Location = new System.Drawing.Point(13, 30);
-            this.all_borrowed_info_table.Name = "all_borrowed_info_table";
-            this.all_borrowed_info_table.RowHeadersWidth = 51;
-            this.all_borrowed_info_table.RowTemplate.Height = 27;
-            this.all_borrowed_info_table.Size = new System.Drawing.Size(823, 146);
-            this.all_borrowed_info_table.TabIndex = 0;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.txt_bno);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.txt_rno);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox5.Location = new System.Drawing.Point(23, 232);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(855, 98);
-            this.groupBox5.TabIndex = 14;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "查询借阅信息";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(713, 34);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 47);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "查询";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // txt_bno
-            // 
-            this.txt_bno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_bno.Location = new System.Drawing.Point(431, 42);
-            this.txt_bno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_bno.Name = "txt_bno";
-            this.txt_bno.Size = new System.Drawing.Size(255, 30);
-            this.txt_bno.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(373, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 27);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "书号";
-            // 
-            // txt_rno
-            // 
-            this.txt_rno.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_rno.Location = new System.Drawing.Point(116, 42);
-            this.txt_rno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_rno.Name = "txt_rno";
-            this.txt_rno.Size = new System.Drawing.Size(231, 30);
-            this.txt_rno.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(18, 45);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 27);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "借书证号";
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 540);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -282,12 +284,12 @@
             this.Text = "借阅管理";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.all_borrowed_info_table)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -300,12 +302,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_brno;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txt_rbno;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_rrno;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView all_borrowed_info_table;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -314,5 +310,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_rno;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_rbno;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_rrno;
+        private System.Windows.Forms.Label label4;
     }
 }
